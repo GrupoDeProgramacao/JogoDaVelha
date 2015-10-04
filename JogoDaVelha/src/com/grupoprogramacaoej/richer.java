@@ -41,39 +41,47 @@ public class richer {
 		while ( (!(matriz.posicoes[0].equals(matriz.posicoes[1]) && matriz.posicoes[1].equals(matriz.posicoes[2]))) &&  
 				(!(matriz.posicoes[3].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[5]))) &&
 				(!(matriz.posicoes[6].equals(matriz.posicoes[7]) && matriz.posicoes[7].equals(matriz.posicoes[8]))) &&
-				(!(matriz.posicoes[0].equals(matriz.posicoes[3]) && matriz.posicoes[3].equals(matriz.posicoes[5]))) &&
+				(!(matriz.posicoes[0].equals(matriz.posicoes[3]) && matriz.posicoes[3].equals(matriz.posicoes[6]))) &&
 				(!(matriz.posicoes[1].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[7]))) &&
 				(!(matriz.posicoes[2].equals(matriz.posicoes[5]) && matriz.posicoes[5].equals(matriz.posicoes[8]))) &&
 				(!(matriz.posicoes[0].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[8]))) &&
-				(!(matriz.posicoes[2].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[8])))	&&
+				(!(matriz.posicoes[2].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[6])))	&&
 				!(cont1 == 5)
 				) {
 
 			if (cont1 <= cont2) {
 				System.out.println("Informe a posição que deseja marcar");
 				escolha = leitura.nextLine();
-				matriz.posicoes[Integer.parseInt(escolha)-1] = player1;
-				matriz.tela();
-				cont1++;
+				if (matriz.posicoes[Integer.parseInt(escolha)-1] == "X" || matriz.posicoes[Integer.parseInt(escolha)-1] == "O") {
+					System.out.println("Informe outra posição, pois esta já esta cheia");
+					escolha = leitura.nextLine();
+				} else {
+					matriz.posicoes[Integer.parseInt(escolha)-1] = player1;
+					matriz.tela();
+					cont1++;
+				}
 			} else {
 				System.out.println("Informe a posição que deseja marcar");
 				escolha = leitura.nextLine();
-				matriz.posicoes[Integer.parseInt(escolha)-1] = player2;
-				matriz.tela();
-				cont2++;
+				if (matriz.posicoes[Integer.parseInt(escolha)-1] == "X" || matriz.posicoes[Integer.parseInt(escolha)-1] == "O") {
+					System.out.println("Informe outra posição, pois esta já esta cheia");
+					escolha = leitura.nextLine();
+				} else {
+					matriz.posicoes[Integer.parseInt(escolha)-1] = player2;
+					matriz.tela();
+					cont1++;
+				}
 			}
 		}
 		
 		if (cont1 == 5) {
-			
 			System.out.println("-----------------------------");
-			System.out.println("Parabéns o player [1] ganhou!");
+			System.out.println("	     Deu Velha!!		 ");
 			System.out.println("-----------------------------");
 		} else {
 			if (cont1 > cont2) {
-
 				System.out.println("-----------------------------");
-				System.out.println("	     Deu Velha!!		 ");
+				System.out.println("Parabéns o player [1] ganhou!");
 				System.out.println("-----------------------------");
 			} else {
 
