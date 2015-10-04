@@ -25,14 +25,21 @@ public class skill {
 		// nome da classe + nome qualquer = new + nome da classe();	
 	skill matriz = new skill();	
 	
-	String Player1 ;
-	String Player2 ;
+	String Player1, Player2, Escolha ;
+	
 	
 	Scanner leitura = new Scanner (System.in);
 	
 	System.out.println("Olá player [1] deseja jogar com [X] ou com [O]?");
-	
-	
+	Escolha = leitura.nextLine();
+		if (Escolha.equalsIgnoreCase("X")) {
+			Player1 = "X";
+			Player2 = "O";	
+		} else {
+		
+			Player1 = "O";
+			Player2 = "X";
+		}
 	
 	for (int i = 0; i < 9; i++) {
 		
