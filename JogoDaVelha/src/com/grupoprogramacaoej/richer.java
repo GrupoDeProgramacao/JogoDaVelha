@@ -38,8 +38,16 @@ public class richer {
 		}
 		
 		while (!(matriz.posicoes[0].equals(matriz.posicoes[1]) && matriz.posicoes[1].equals(matriz.posicoes[2]))) {
+			matriz.tela();
 			System.out.println("Informe a posição que deseja marcar");
 			escolha = leitura.nextLine();
+			matriz.posicoes[Integer.parseInt(escolha)-1] = player1;
+			matriz.tela();
+			
+			System.out.println("Informe a posição que deseja marcar");
+			escolha = leitura.nextLine();
+			matriz.posicoes[Integer.parseInt(escolha)-1] = player2;
+			matriz.tela();
 			
 		}
 		
