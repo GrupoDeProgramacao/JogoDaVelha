@@ -17,6 +17,7 @@ public class richer {
 
 		richer matriz = new richer();
 		String player1, player2, escolha;
+		int cont1 = 0, cont2 = 0;
 		Scanner leitura = new Scanner(System.in);
 		
 		for (int i = 0; i < 9; i++) {
@@ -37,20 +38,25 @@ public class richer {
 			player2 = "X";
 		}
 		
-		while (!(matriz.posicoes[0].equals(matriz.posicoes[1]) && matriz.posicoes[1].equals(matriz.posicoes[2])) &&
-				!(matriz.posicoes[3].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[5])) && 
-				!(matriz.posicoes[6].equals(matriz.posicoes[7]) && matriz.posicoes[7].equals(matriz.posicoes[8])) ) {
-			matriz.tela();
-			System.out.println("Informe a posição que deseja marcar");
-			escolha = leitura.nextLine();
-			matriz.posicoes[Integer.parseInt(escolha)-1] = player1;
-			matriz.tela();
-			
-			System.out.println("Informe a posição que deseja marcar");
-			escolha = leitura.nextLine();
-			matriz.posicoes[Integer.parseInt(escolha)-1] = player2;
-			matriz.tela();
-			
+		while ( (!(matriz.posicoes[0].equals(matriz.posicoes[1]) && matriz.posicoes[1].equals(matriz.posicoes[2]))) &&  
+				(!(matriz.posicoes[3].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[5]))) &&
+				(!(matriz.posicoes[6].equals(matriz.posicoes[7]) && matriz.posicoes[7].equals(matriz.posicoes[8])))) {
+
+			if (cont1 <= cont2) {
+				matriz.tela();
+				System.out.println("Informe a posição que deseja marcar");
+				escolha = leitura.nextLine();
+				matriz.posicoes[Integer.parseInt(escolha)-1] = player1;
+				matriz.tela();
+				cont1++;
+			} else {
+				matriz.tela();
+				System.out.println("Informe a posição que deseja marcar");
+				escolha = leitura.nextLine();
+				matriz.posicoes[Integer.parseInt(escolha)-1] = player2;
+				matriz.tela();
+				cont2++;
+			}
 		}
 		
 		
