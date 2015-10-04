@@ -45,7 +45,8 @@ public class richer {
 				(!(matriz.posicoes[1].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[7]))) &&
 				(!(matriz.posicoes[2].equals(matriz.posicoes[5]) && matriz.posicoes[5].equals(matriz.posicoes[8]))) &&
 				(!(matriz.posicoes[0].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[8]))) &&
-				(!(matriz.posicoes[2].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[8])))				
+				(!(matriz.posicoes[2].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[8])))	&&
+				!(cont1 == 5)
 				) {
 
 			if (cont1 <= cont2) {
@@ -63,13 +64,13 @@ public class richer {
 			}
 		}
 		
-		if (cont1 > cont2) {
+		if (cont1 == 5) {
 			
 			System.out.println("-----------------------------");
 			System.out.println("Parabéns o player [1] ganhou!");
 			System.out.println("-----------------------------");
 		} else {
-			if (cont1 == 5) {
+			if (cont1 > cont2) {
 
 				System.out.println("-----------------------------");
 				System.out.println("	     Deu Velha!!		 ");
