@@ -64,7 +64,8 @@ public class skill {
 				(!(matriz.posicoes[1].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[7]))) &&
 				(!(matriz.posicoes[2].equals(matriz.posicoes[5]) && matriz.posicoes[5].equals(matriz.posicoes[8]))) &&
 				(!(matriz.posicoes[0].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[8]))) &&
-				(!(matriz.posicoes[2].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[6])))				
+				(!(matriz.posicoes[2].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[6])))	&&			
+				!(cont1 == 5)
 				)
 				
 				{
@@ -120,12 +121,12 @@ public class skill {
 		} else {
 			if (cont1 > cont2) {
 				System.out.println("-----------------------------------------------------");
-				System.out.println("Parabéns"+ nomeprimeirojogador+ " você ganhou a partida!");
+				System.out.println("Parabéns "+ nomeprimeirojogador+ " você ganhou a partida!");
 				System.out.println("-----------------------------------------------------");
 			} else {
 
 				System.out.println("-----------------------------------------------------");
-				System.out.println("Parabéns"+ nomesegundojogador+ " você ganhou a partida!");
+				System.out.println("Parabéns "+ nomesegundojogador+ " você ganhou a partida!");
 				System.out.println("-----------------------------------------------------");
 			}
 			}
