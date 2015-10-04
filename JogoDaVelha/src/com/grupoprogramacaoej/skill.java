@@ -1,3 +1,13 @@
+/*
+ * X  O  X
+ * O  X  O
+ * X  X  O      <-  este jogo esta apresentando bug, pois está retornando velha! 
+ * 					sendo que nesse caso o jogador do [X] deveria ter ganhado.
+ * 
+ */
+
+
+
 package com.grupoprogramacaoej;
 
 import java.util.Scanner;
@@ -114,6 +124,8 @@ public class skill {
 		
 }
 		
+		matriz.tela();
+		
 		if (cont1 == 5) {
 			System.out.println("-----------------------------");
 			System.out.println("	    Deu Velha!!		 ");
@@ -129,8 +141,8 @@ public class skill {
 				System.out.println("Parabéns "+ nomesegundojogador+ " você ganhou a partida!");
 				System.out.println("-----------------------------------------------------");
 			}
-			}
 		}
 			
+	}
 }
 
