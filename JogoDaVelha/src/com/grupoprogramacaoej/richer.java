@@ -17,7 +17,7 @@ public class richer {
 
 		richer matriz = new richer();
 		String player1, player2, escolha;
-		int cont1 = 0, cont2 = 0;
+		int cont1 = 0, cont2 = 0, contador = 0;
 		Scanner leitura = new Scanner(System.in);
 		
 		for (int i = 0; i < 9; i++) {
@@ -78,7 +78,13 @@ public class richer {
 			}
 		}
 		
-		if (cont1 == 5) {
+		for (int i = 0; i < 9; i++) {
+			if (matriz.posicoes[i].equalsIgnoreCase("X") || matriz.posicoes[i].equalsIgnoreCase("O")) {
+				contador++;
+			}
+		}
+		
+		if (cont1 == 5 && contador == 9) {
 			System.out.println("-----------------------------");
 			System.out.println("	     Deu Velha!!		 ");
 			System.out.println("-----------------------------");
