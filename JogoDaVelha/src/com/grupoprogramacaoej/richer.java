@@ -1,6 +1,6 @@
 package com.grupoprogramacaoej;
 
-public class JogoDaVelha {
+public class richer {
 
 	public static void main(String[] args) {
 
