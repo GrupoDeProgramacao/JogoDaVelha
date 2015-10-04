@@ -37,7 +37,9 @@ public class richer {
 			player2 = "X";
 		}
 		
-		while (!(matriz.posicoes[0].equals(matriz.posicoes[1]) && matriz.posicoes[1].equals(matriz.posicoes[2]))) {
+		while (!(matriz.posicoes[0].equals(matriz.posicoes[1]) && matriz.posicoes[1].equals(matriz.posicoes[2])) &&
+				!(matriz.posicoes[3].equals(matriz.posicoes[4]) && matriz.posicoes[4].equals(matriz.posicoes[5])) && 
+				!(matriz.posicoes[6].equals(matriz.posicoes[7]) && matriz.posicoes[7].equals(matriz.posicoes[8])) ) {
 			matriz.tela();
 			System.out.println("Informe a posição que deseja marcar");
 			escolha = leitura.nextLine();
