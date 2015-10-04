@@ -39,6 +39,11 @@ public class Ulisses {
 		System.out.println(nomeprimeirojogador+" deseja jogar com X ou O: ");
 		escolha = leitura.nextLine();
 		
+		while (!(escolha.equalsIgnoreCase("X") || escolha.equalsIgnoreCase("O"))) {
+		System.out.println(nomeprimeirojogador+" Escolha X ou O");
+		escolha = leitura.nextLine();
+		}
+		
 		if (escolha.equalsIgnoreCase("X")) {
 			player1 = "X";
 			player2 = "O";
