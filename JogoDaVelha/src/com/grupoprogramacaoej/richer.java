@@ -49,19 +49,36 @@ public class richer {
 				) {
 
 			if (cont1 <= cont2) {
-				matriz.tela();
 				System.out.println("Informe a posição que deseja marcar");
 				escolha = leitura.nextLine();
 				matriz.posicoes[Integer.parseInt(escolha)-1] = player1;
 				matriz.tela();
 				cont1++;
 			} else {
-				matriz.tela();
 				System.out.println("Informe a posição que deseja marcar");
 				escolha = leitura.nextLine();
 				matriz.posicoes[Integer.parseInt(escolha)-1] = player2;
 				matriz.tela();
 				cont2++;
+			}
+		}
+		
+		if (cont1 > cont2) {
+			
+			System.out.println("-----------------------------");
+			System.out.println("Parabéns o player [1] ganhou!");
+			System.out.println("-----------------------------");
+		} else {
+			if (cont1 == 5) {
+
+				System.out.println("-----------------------------");
+				System.out.println("	     Deu Velha!!		 ");
+				System.out.println("-----------------------------");
+			} else {
+
+				System.out.println("-----------------------------");
+				System.out.println("Parabéns o player [2] ganhou!");
+				System.out.println("-----------------------------");
 			}
 		}
 		
