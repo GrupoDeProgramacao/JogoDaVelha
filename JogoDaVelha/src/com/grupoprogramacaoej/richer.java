@@ -50,7 +50,6 @@ public class richer {
 				) {
 
 			if (cont1 <= cont2) {
-				
 				System.out.println("Informe a posição que deseja marcar");
 				escolha = leitura.nextLine();
 				
@@ -64,7 +63,6 @@ public class richer {
 				matriz.tela();
 				cont1++;
 			} else {
-				
 				System.out.println("Informe a posição que deseja marcar");
 				escolha = leitura.nextLine();
 				
