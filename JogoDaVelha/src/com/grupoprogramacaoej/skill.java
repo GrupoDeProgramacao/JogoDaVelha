@@ -35,7 +35,6 @@ public class skill {
 		matriz.posicoes[i] = ""+(i+1)+"  ";
 		}	
 		
-	matriz.tela();
 		
 	
 	System.out.println("Olá player [1] deseja jogar com [X] ou com [O]?");
@@ -61,50 +60,67 @@ public class skill {
 				
 				{
 			
+			matriz.tela();
 			
 			if (cont1 <= cont2) {
 			
 			cont1++;
 			
+			System.out.println("                                   ");
 			System.out.println("Informe a posição que deseja marcar");
 			Escolha = leitura.nextLine();
+			
+			//Se o espaço já estiver preenchido ele repete a pergunta
+			while (matriz.posicoes[Integer.parseInt(Escolha)-1].equalsIgnoreCase("X") || 
+					matriz.posicoes[Integer.parseInt(Escolha)-1].equalsIgnoreCase("O")) {
+			System.out.println("Informe a posição que deseja marcar");
+			Escolha = leitura.nextLine();
+			}
+			
+			
 			matriz.posicoes[Integer.parseInt(Escolha)-1] = Player1+"  ";
 			
-			matriz.tela();
+			
 			}else
 			
 			{
 			cont2++;	
 			System.out.println("Informe a posição que deseja marcar");
 			Escolha = leitura.nextLine();
+		
+			//Se o espaço já estiver preenchido ele repete a pergunta
+			while (matriz.posicoes[Integer.parseInt(Escolha)-1].equalsIgnoreCase("X") || 
+					matriz.posicoes[Integer.parseInt(Escolha)-1].equalsIgnoreCase("O")) {
+			System.out.println("Informe a posição que deseja marcar");
+			Escolha = leitura.nextLine();
+			}
+			
+			
 			matriz.posicoes[Integer.parseInt(Escolha)-1] = Player2+ "  ";
-			matriz.tela();
+			
 			
 			}
 					
 		
 }
 		
-		if (cont1 == 4 ) {
-			
+		if (cont1 == 5) {
 			System.out.println("-----------------------------");
-			System.out.println("         Deu velha!");
+			System.out.println("	    Deu Velha!!		 ");
 			System.out.println("-----------------------------");
 		} else {
 			if (cont1 > cont2) {
 				System.out.println("-----------------------------");
 				System.out.println("Parabéns o player [1] ganhou!");
 				System.out.println("-----------------------------");
-			}else {
-				if (cont2 > cont1) {
-					
-					System.out.println("-----------------------------");
-					System.out.println("Parabéns o player [2] ganhou!");
-					System.out.println("-----------------------------");
-					
-				}
+			} else {
+
+				System.out.println("-----------------------------");
+				System.out.println("Parabéns o player [2] ganhou!");
+				System.out.println("-----------------------------");
+			}
 			}
 		}
 			
 }
-}
+
