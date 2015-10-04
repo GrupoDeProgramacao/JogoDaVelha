@@ -29,6 +29,16 @@ public class richer {
 		System.out.println("Deseja jogar com X ou O: ");
 		escolha = leitura.nextLine();
 		
+		if (escolha.equalsIgnoreCase("X")) {
+			player1 = "X";
+			player2 = "O";
+		} else {
+			player1 = "X";
+			player2 = "O";
+		}
+		
+		
+		
 	}
 
 }
