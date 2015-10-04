@@ -34,7 +34,7 @@ public class Ulisses {
 		nomesegundojogador = leitura.nextLine();
 		
 		
-		
+		//sómente X ou O
 		
 		System.out.println(nomeprimeirojogador+" deseja jogar com X ou O: ");
 		escolha = leitura.nextLine();
