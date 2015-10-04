@@ -81,6 +81,17 @@ public class skill {
 			matriz.tela();
 			
 			}
+			
+			if (cont1 > cont2) {
+				
+				System.out.println("-----------------------------");
+				System.out.println("Parabéns o player [1] ganhou!");
+				System.out.println("-----------------------------");
+			} else {
+				System.out.println("-----------------------------");
+				System.out.println("Parabéns o player [2] ganhou!");
+				System.out.println("-----------------------------");
+			}
 		
 		
 }
