@@ -33,10 +33,15 @@ public class richer {
 			player1 = "X";
 			player2 = "O";
 		} else {
-			player1 = "X";
-			player2 = "O";
+			player1 = "O";
+			player2 = "X";
 		}
 		
+		while (!(matriz.posicoes[0].equals(matriz.posicoes[1]) && matriz.posicoes[1].equals(matriz.posicoes[2]))) {
+			System.out.println("Informe a posição que deseja marcar");
+			escolha = leitura.nextLine();
+			
+		}
 		
 		
 	}
