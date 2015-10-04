@@ -27,8 +27,15 @@ public class skill {
 	
 	String Player1, Player2, Escolha ;
 	
-	
 	Scanner leitura = new Scanner (System.in);
+	
+	for (int i = 0; i < 9; i++) {
+		
+		matriz.posicoes[i] = ""+(i+1)+"  ";
+		}	
+		
+	matriz.tela();
+		
 	
 	System.out.println("Olá player [1] deseja jogar com [X] ou com [O]?");
 	Escolha = leitura.nextLine();
@@ -41,14 +48,17 @@ public class skill {
 			Player2 = "X";
 		}
 	
-	for (int i = 0; i < 9; i++) {
+		while (!(matriz.posicoes[0].equals(matriz.posicoes[1]) && matriz.posicoes[1].equals(matriz.posicoes[2]))) {
+			System.out.println("Informe a posição que deseja marcar");
+			Escolha = leitura.nextLine();
+			matriz.posicoes[Integer.parseInt(Escolha)-1] = Player1;
+			
+		matriz.tela();
+				
+			
+		}
+
 		
-		matriz.posicoes[i] = ""+(i+1)+"  ";
-		
-			}	
-		
-	
-	matriz.tela();
 		
 	}
 			
