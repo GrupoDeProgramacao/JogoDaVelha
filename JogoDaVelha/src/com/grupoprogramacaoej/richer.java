@@ -52,25 +52,15 @@ public class richer {
 			if (cont1 <= cont2) {
 				System.out.println("Informe a posição que deseja marcar");
 				escolha = leitura.nextLine();
-				if (matriz.posicoes[Integer.parseInt(escolha)-1] == "X" || matriz.posicoes[Integer.parseInt(escolha)-1] == "O") {
-					System.out.println("Informe outra posição, pois esta já esta cheia");
-					escolha = leitura.nextLine();
-				} else {
-					matriz.posicoes[Integer.parseInt(escolha)-1] = player1;
-					matriz.tela();
-					cont1++;
-				}
+				matriz.posicoes[Integer.parseInt(escolha)-1] = player1;
+				matriz.tela();
+				cont1++;
 			} else {
 				System.out.println("Informe a posição que deseja marcar");
 				escolha = leitura.nextLine();
-				if (matriz.posicoes[Integer.parseInt(escolha)-1] == "X" || matriz.posicoes[Integer.parseInt(escolha)-1] == "O") {
-					System.out.println("Informe outra posição, pois esta já esta cheia");
-					escolha = leitura.nextLine();
-				} else {
-					matriz.posicoes[Integer.parseInt(escolha)-1] = player2;
-					matriz.tela();
-					cont1++;
-				}
+				matriz.posicoes[Integer.parseInt(escolha)-1] = player2;
+				matriz.tela();
+				cont2++;
 			}
 		}
 		
