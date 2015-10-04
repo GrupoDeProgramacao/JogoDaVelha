@@ -25,7 +25,7 @@ public class skill {
 		// nome da classe + nome qualquer = new + nome da classe();	
 	skill matriz = new skill();	
 	
-	String Player1, Player2, Escolha ;
+	String Player1, Player2, Escolha,nomeprimeirojogador,nomesegundojogador;
 	int cont1 = 0 , cont2 = 0;
 	
 	Scanner leitura = new Scanner (System.in);
@@ -35,10 +35,19 @@ public class skill {
 		matriz.posicoes[i] = ""+(i+1)+"  ";
 		}	
 		
-		
+	System.out.println("Qual nome do primeiro jogador ?");
+	nomeprimeirojogador = leitura.nextLine();
+	System.out.println("Qual nome do segundo jogador ?");
+	nomesegundojogador = leitura.nextLine();
 	
-	System.out.println("Olá player [1] deseja jogar com [X] ou com [O]?");
+	System.out.println("Olá "+nomeprimeirojogador+" você deseja jogar com [X] ou com [O]?");
 	Escolha = leitura.nextLine();
+	
+	while (!(Escolha.equalsIgnoreCase("X") || Escolha.equalsIgnoreCase("O"))) {
+		System.out.println(nomeprimeirojogador+" Escolha X ou O");
+		Escolha = leitura.nextLine();
+		}
+
 		if (Escolha.equalsIgnoreCase("X")) {
 			Player1 = "X";
 			Player2 = "O";	
@@ -67,13 +76,13 @@ public class skill {
 			cont1++;
 			
 			System.out.println("                                   ");
-			System.out.println("Informe a posição que deseja marcar");
+			System.out.println(nomeprimeirojogador+" informe a posição que deseja marcar");
 			Escolha = leitura.nextLine();
 			
 			//Se o espaço já estiver preenchido ele repete a pergunta
 			while (matriz.posicoes[Integer.parseInt(Escolha)-1].equalsIgnoreCase("X") || 
 					matriz.posicoes[Integer.parseInt(Escolha)-1].equalsIgnoreCase("O")) {
-			System.out.println("Informe a posição que deseja marcar");
+			System.out.println(nomeprimeirojogador+" informe a posição que deseja marcar");
 			Escolha = leitura.nextLine();
 			}
 			
@@ -85,13 +94,13 @@ public class skill {
 			
 			{
 			cont2++;	
-			System.out.println("Informe a posição que deseja marcar");
+			System.out.println(nomesegundojogador+" informe a posição que deseja marcar");
 			Escolha = leitura.nextLine();
 		
 			//Se o espaço já estiver preenchido ele repete a pergunta
 			while (matriz.posicoes[Integer.parseInt(Escolha)-1].equalsIgnoreCase("X") || 
 					matriz.posicoes[Integer.parseInt(Escolha)-1].equalsIgnoreCase("O")) {
-			System.out.println("Informe a posição que deseja marcar");
+			System.out.println(nomesegundojogador+" informe a posição que deseja marcar");
 			Escolha = leitura.nextLine();
 			}
 			
@@ -110,14 +119,14 @@ public class skill {
 			System.out.println("-----------------------------");
 		} else {
 			if (cont1 > cont2) {
-				System.out.println("-----------------------------");
-				System.out.println("Parabéns o player [1] ganhou!");
-				System.out.println("-----------------------------");
+				System.out.println("-----------------------------------------------------");
+				System.out.println("Parabéns"+ nomeprimeirojogador+ " você ganhou a partida!");
+				System.out.println("-----------------------------------------------------");
 			} else {
 
-				System.out.println("-----------------------------");
-				System.out.println("Parabéns o player [2] ganhou!");
-				System.out.println("-----------------------------");
+				System.out.println("-----------------------------------------------------");
+				System.out.println("Parabéns"+ nomesegundojogador+ " você ganhou a partida!");
+				System.out.println("-----------------------------------------------------");
 			}
 			}
 		}
