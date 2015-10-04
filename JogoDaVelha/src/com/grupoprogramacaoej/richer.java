@@ -50,14 +50,30 @@ public class richer {
 				) {
 
 			if (cont1 <= cont2) {
+				
 				System.out.println("Informe a posição que deseja marcar");
 				escolha = leitura.nextLine();
+				
+				while (matriz.posicoes[Integer.parseInt(escolha)-1].equalsIgnoreCase("X") || 
+						matriz.posicoes[Integer.parseInt(escolha)-1].equalsIgnoreCase("O")) {
+				System.out.println("Informe a posição que deseja marcar");
+				escolha = leitura.nextLine();
+				}
+				
 				matriz.posicoes[Integer.parseInt(escolha)-1] = player1;
 				matriz.tela();
 				cont1++;
 			} else {
+				
 				System.out.println("Informe a posição que deseja marcar");
 				escolha = leitura.nextLine();
+				
+				while (matriz.posicoes[Integer.parseInt(escolha)-1].equalsIgnoreCase("X") || 
+						matriz.posicoes[Integer.parseInt(escolha)-1].equalsIgnoreCase("O")) {
+				System.out.println("Informe a posição que deseja marcar");
+				escolha = leitura.nextLine();
+				}
+				
 				matriz.posicoes[Integer.parseInt(escolha)-1] = player2;
 				matriz.tela();
 				cont2++;
