@@ -4,7 +4,7 @@ public class skill {
 	
 	String posicoes [] = new String[9];
 	
-	//metodo tela criado
+	//metodo tela criado...
 	public void tela(){
 		
 		System.out.println(posicoes[0]+""+posicoes[1]+""+posicoes[2]);	
