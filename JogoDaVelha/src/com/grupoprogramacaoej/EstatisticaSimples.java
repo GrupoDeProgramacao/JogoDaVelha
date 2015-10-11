@@ -11,13 +11,18 @@ public class EstatisticaSimples {
     int numero = 0;
     
     
-    for (int i = 0; i < numero; i++) {
-    	
-    	System.out.println("Digite um numero");
-    	
-		
+    int pos = 0;
+	String num = "";
+	
+	int numeros [] = new int[pos];	
+	
+	do {
+	System.out.println("Digite um numero:");
+	num = teclado.nextLine();
+	
+	pos = pos+1;	
+	numeros[pos] = Integer.parseInt(num);	
+	} while (num == "");
+	
 	}
-    
-	}
-
 }
