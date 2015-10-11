@@ -7,23 +7,18 @@ public class EstatisticaSimples {
 
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner (System.in);
-    double valor_minimo, valor_maximo, valor_medio;
-    int numero_elementos, troca;
-    int numero = 0;
-    
-    
-    int pos = 0;
-	String num;
+		double valor_minimo, valor_maximo, valor_medio;
+		int numero_elementos, troca;
+		int numero = 0;
+		String num;
 	
-	ArrayList<Integer> numeros = new ArrayList<Integer>();
+		ArrayList<Integer> numeros = new ArrayList<Integer>();
 	
-	do 
-	System.out.println("Digite um numero:");
-	num = teclado.nextLine();
-	
-	pos = pos+1;	
-	numeros[pos] = Integer.parseInt(num);	
-	} while (num != "");
+		do {
+			System.out.println("Digite um numero:");
+			num = teclado.nextLine();
+			numeros.add(Integer.parseInt(num));
+		} while (num != "");
 	
 	for (int i = 0; i < numeros.length; i++) {
 		for (int j = 0; j < numeros.length; j++) {
