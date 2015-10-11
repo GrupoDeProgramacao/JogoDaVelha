@@ -24,8 +24,8 @@ public class EstatisticaSimples {
 		for (int j = 0; j < numeros.size(); j++) {
 			if (numeros.get(j) < numeros.get(i) ) {
 				troca = numeros.get(i);
-				numeros.get(i) = numeros.get(j);
-				numeros.get(j) = troca;
+				numeros.add(numeros.indexOf(i),j);
+				numeros.add(numeros.indexOf(j),troca);
 				
 				
 				
