@@ -1,3 +1,10 @@
+/*
+ * X  O  X
+ * O  X  O
+ * X  X  O      <-  este jogo esta apresentando bug, pois está retornando velha! 
+ * 					sendo que nesse caso o jogador do [X] deveria ter ganhado.
+ * 
+ */
 package com.grupoprogramacaoej;
 
 import java.util.Scanner;
@@ -116,7 +123,7 @@ public class Ulisses {
 		
 		matriz.tela();
 		
-		if (cont1 == 5) {
+		if (cont1 == 6) {
 			System.out.println("-----------------------------");
 			System.out.println("	    Deu Velha!!		 ");
 			System.out.println("-----------------------------");
