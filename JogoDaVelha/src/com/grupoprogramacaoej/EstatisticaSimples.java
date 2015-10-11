@@ -10,9 +10,11 @@ public class EstatisticaSimples {
     int numero_elementos;
     int numero = 0;
     
-    for (int i = 0; i < args.length; numero) {
-		
-	} {
+    
+    for (int i = 0; i < numero; i++) {
+    	
+    	System.out.println("Digite um numero");
+    	
 		
 	}
     
