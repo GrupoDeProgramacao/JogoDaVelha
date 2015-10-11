@@ -1,5 +1,6 @@
 package com.grupoprogramacaoej;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EstatisticaSimples {
@@ -14,9 +15,9 @@ public class EstatisticaSimples {
     int pos = 0;
 	String num;
 	
-	int numeros [] = new int[pos];	
+	ArrayList<Integer> numeros = new ArrayList<Integer>();
 	
-	do {
+	do 
 	System.out.println("Digite um numero:");
 	num = teclado.nextLine();
 	
