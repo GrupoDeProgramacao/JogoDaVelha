@@ -20,9 +20,9 @@ public class EstatisticaSimples {
 			numeros.add(Integer.parseInt(num));
 		} while (num != "");
 	
-	for (int i = 0; i < numeros.length; i++) {
-		for (int j = 0; j < numeros.length; j++) {
-			if (numeros[j] < numeros[i]) {
+	for (int i = 0; i < numeros.size(); i++) {
+		for (int j = 0; j < numeros.size(); j++) {
+			if (numeros.size() < numeros.size()) {
 				
 			}
 		}
