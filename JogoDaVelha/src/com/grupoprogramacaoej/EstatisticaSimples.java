@@ -7,12 +7,12 @@ public class EstatisticaSimples {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner (System.in);
     double valor_minimo, valor_maximo, valor_medio;
-    int numero_elementos;
+    int numero_elementos, troca;
     int numero = 0;
     
     
     int pos = 0;
-	String num = "";
+	String num;
 	
 	int numeros [] = new int[pos];	
 	
@@ -22,7 +22,15 @@ public class EstatisticaSimples {
 	
 	pos = pos+1;	
 	numeros[pos] = Integer.parseInt(num);	
-	} while (num == "");
+	} while (num != "");
+	
+	for (int i = 0; i < numeros.length; i++) {
+		for (int j = 0; j < numeros.length; j++) {
+			if (numeros[j] < numeros[i]) {
+				
+			}
+		}
+	}
 	
 	}
 }
