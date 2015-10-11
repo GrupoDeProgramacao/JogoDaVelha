@@ -22,7 +22,12 @@ public class EstatisticaSimples {
 	
 	for (int i = 0; i < numeros.size(); i++) {
 		for (int j = 0; j < numeros.size(); j++) {
-			if (numeros.size() < numeros.size()) {
+			if (numeros.get(j) < numeros.get(i) ) {
+				troca = numeros.get(i);
+				numeros.get(i) = numeros.get(j);
+				numeros.get(j) = troca;
+				
+				
 				
 			}
 		}
